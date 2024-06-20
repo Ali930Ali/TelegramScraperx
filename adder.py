@@ -121,18 +121,3 @@ for user in users:
 
 # Dosya adını ve yolunu kontrol etmek için tam yol oluşturun
 file_path = os.path.join(os.getcwd(), "members.csv")
-
-# Kullanıcı listesini oluşturmak için bir liste tanımlayın
-users = []
-
-# Dosyanın var olup olmadığını kontrol edin
-if os.path.exists(file_path):
-    # Dosya bulunduysa, dosyayı açın ve okuyun
-    with open(file_path, encoding='UTF-8') as f:
-        for line in f:
-            users.append(line.strip())  # Dosya içeriğini users listesine ekler
-    print("Dosya başarıyla okundu.")
-else:
-    # Dosya bulunamadıysa, hata mesajı yazdırın
-    print(f"Dosya bulunamadı: {file_path}")
-              
